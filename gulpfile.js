@@ -6,5 +6,5 @@ gulp.task("sass", function () {
 });
 
 gulp.task("watch", function () {
-  gulp.watch("scss/main.scss", gulp.series("sass"));
+  gulp.watch("scss/**/*.scss", gulp.series("sass"));
 });

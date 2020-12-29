@@ -109,6 +109,34 @@ body {
   animation: moveInFromBottom 1.25s ease-out 1s;
   animation-fill-mode: backwards; }
 
+.row {
+  max-width: 114rem;
+  background-color: #f1f1f1;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 4rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    background-color: #ff9253;
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 3rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 3rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - (2 * 3rem)) / 3); }
+  .row .col-1-of-4 {
+    width: calc((100% - (3 * 3rem)) / 4); }
+  .row .col-2-of-3 {
+    width: calc( 2 * ((100% - (2 * 3rem)) / 3) + 3rem); }
+  .row .col-2-of-4 {
+    width: calc( 2 * ((100% - (3 * 3rem)) / 4) + 3rem); }
+  .row .col-3-of-4 {
+    width: calc( 3 * ((100% - (3 * 3rem)) / 4) + (2 * 3rem)); }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.3), rgba(40, 180, 133, 0.3)), url(../img/hero.jpg);
